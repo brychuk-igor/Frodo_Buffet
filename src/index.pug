@@ -1,38 +1,5 @@
-doctype html
-html(lang="en")
-  head
-    title= pageTitle
-    link(rel='stylesheet', href='css/all.css')
-  body.start_top
+extends layouts/_layout
 
+block content
+  h1 Hello
   - var menu = [{name: 'О нас', id:1}, {name: 'Блог', id:2}, {name: 'Меню', id:3},{name: 'Акции', id:4},{name: 'Доставка', id:5},{name: 'Контакты', id:6},{name: 'Вход', id:7}]
-    var content_blocks = data
-
-    mixin menu(items)
-      ul.top-menu
-        each item, index in items
-          li.top-menu__item
-            a.top-menu__item__link= item.name
-            if item.children
-              +menu(item.children)
-
-    mixin content_blocks(items)
-      each item, index in items
-        .content-graph-block
-          h2= item.chapter
-          p= item.descr
-          if item.children
-            +content_blocks(item.children)
-
-
-
-  div.container
-    +menu(menu)
-    .logo_block
-      a.logo(href='#')
-        img(src="img/logo.png" alt="Frodo Buffet")
-
-    .promo-gallery
-      img(src="img/hamburger1.png" alt="hamburger1")
-
-    +content_blocks(content_blocks)
