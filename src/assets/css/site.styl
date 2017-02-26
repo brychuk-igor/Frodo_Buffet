@@ -1,7 +1,21 @@
+bg-color = #f1f1f3
+text-color = #1f1f1f
+
 body
-  background #f1f1f3
-  color white
+  background bg-color
+  color text-color
   font 62.5%/1.33 arial, tahoma
+
+html, body
+	height 100%;
+	min-height 100%;
+	min-width 100%;
+	width 100%;
+
+body
+	height auto !important;
+	height 100%;
+
 
 .container
   width 1100px
@@ -10,4 +24,4 @@ body
   position relative
 
 .start_top
-    background url(../img/top.jpg) center top no-repeat
+    background url(../img/top.jpg) bg-color center top no-repeat

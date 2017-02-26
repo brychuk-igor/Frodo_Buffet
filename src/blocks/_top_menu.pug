@@ -1,0 +1,7 @@
+mixin b_top_menu(items)
+	ul.top-menu
+			each item, index in items
+				li.top-menu__item
+					a.top-menu__item__link= item.name
+						if item.children
+							+menu(item.children)
