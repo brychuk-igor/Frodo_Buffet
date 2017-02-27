@@ -1,0 +1,20 @@
+mixin products_menu(prefix, ...items)
+	- wraperPositionLeft = '_wrap_left'
+	- wraperPositionRight = '_wrap_right'
+	each item, index in items
+		div(class=index%2 == 0 ? prefix + wraperPositionLeft+' container' : prefix + wraperPositionRight+' container')
+			.product-img.sec2-f
+				img(class="product-img__img" src=item.productImgSrc alt="")
+				.product-img__feature
+					.product-feature
+						.product-feature__block
+							span.product-feature__text
+							span.product-feature__line
+			.product-text.sec2-f
+				h3.product-text__title #{item.productTitle}
+				.product-text__content
+					h4.product-text__heading #{item.productHeading}
+					span.product-text__tags #{item.productTags}
+					p.product-text__paragraph #{item.productParagraph}
+				.product-text__btn.btn-link.btn-guble-line #{item.productDoubleLine}
+
