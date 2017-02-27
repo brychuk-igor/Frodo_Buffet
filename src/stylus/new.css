@@ -2,7 +2,6 @@ body {
     background-color: #fff;
     color: #1f1f1f;
     font-family: Tahoma,sans-serif;
-    font-size: 16px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@ h1,h2,h3,h4,h5,h6,p {
     margin:0;
 }
 .product-img {
-    text-align: center;   
+    text-align: center;
 }
 .container-full {
     box-sizing: border-box;
