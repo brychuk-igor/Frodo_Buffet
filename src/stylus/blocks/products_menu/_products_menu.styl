@@ -1,0 +1,95 @@
+.product-img
+	text-align center
+.products-menu__wrap_right .product-img, .products-menu__wrap_left .product-text
+	float left
+.products-menu__wrap_right .product-text, .products-menu__wrap_left .product-img
+	float right
+/* Title Section*/
+.container-title 
+	font-size 8em
+	font-weight 700
+	color #1f1f1f
+	position relative
+	text-align center
+	padding-top 75px
+	padding-bottom 75px
+.container-title__line
+	background-color #f48a00
+	width 15rem
+	height .75rem
+	position absolute
+	top 0
+	bottom 0
+	margin auto
+	right 50%
+/* Burger Section*/
+.product-text__title
+	padding .4em 4rem .2em
+.product-text__title, .product-text__heading
+	font-size 4em
+	font-weight 700
+.product-text__content
+	background-color #1f1f1f
+	position relative
+	padding 3.8em 6em 7em 6em
+.product-text__content:before
+	background-color #1f1f1f
+	content ""
+	position absolute
+	top 0
+	bottom 0
+	width 50vw
+	z-index -1
+.products-menu__wrap_left .product-text
+	text-align right
+.products-menu__wrap_right .product-text 
+	text-align left
+.products-menu__wrap_left .product-text__content:before
+	right 0
+.products-menu__wrap_right .product-text__content:before
+	left 0
+.product-text__heading
+	color #fff
+	margin-bottom 10px
+.product-text__paragraph
+	font-size 3.3em
+	color #fff
+	padding 27px 0 10px
+	line-height 155%
+.product-text__paragraph_color
+	color #f48a00
+.product-text__tags
+	background-color #f48a00
+	font-weight 600
+	padding .8em 1.4em
+	color #fff
+	display inline-block
+	font-size 1.8em
+	
+.btn-link
+	padding 20px 64px
+	margin 78px 0 192px
+	font-size 3.5em
+	font-weight 700
+	background-color transparent
+	border 2px solid #1f1f1f
+	color #1f1f1f
+	cursor pointer
+	display inline-block
+	outline none
+	position relative
+	text-align center
+	text-decoration none
+	text-transform uppercase
+	vertical-align middle
+	box-sizing border-box
+	transition all 250ms ease
+	&:before
+		content:""
+		border 2px solid #1f1f1f
+		pointer-events none
+		height:100%
+		width 100%
+		position absolute
+		right 8px
+		top 12px
