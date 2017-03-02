@@ -1,0 +1,18 @@
+mixin b_delivery()
+	.delivery_block
+		+b.container
+			h2.title-cross.title-cross_light Доставка
+			mixin item(imageName, text)
+				div.item
+					img(src=imageName alt="").item__image 
+					p.item__text= text
+			+item("img/time.png", "Вы оформляете заказ до 13:00")
+			+item("img/car.png", "Доставляем Вам в удобное для Вас время с 9:00 до 20:00 и удобное место")
+			+item("img/food.png", "Приятного аппетита!")
+			p.delivery__text_top
+				| Сделай фото с любимым блюдом от<br>
+				| Фродо, розмести в инстаграм
+			p.delivery__text_bottom
+				| И получи дополнительный десерт<br>
+				| при следующем заказе :)
+			img.delivery__image(src="img/instagram.png")

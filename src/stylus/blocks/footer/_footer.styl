@@ -1,0 +1,109 @@
+.footer_block
+	padding-top 115px
+	padding-bottom 150px
+	text-align center
+	background bgcolor = #1f1f1f
+	position relative
+	&:before
+		position absolute
+		display block
+		content ''
+		width 0
+		height 0
+		top -220px
+		left 0
+		border-left 0 solid transparent
+		border-right 675px solid transparent
+		border-bottom 220px solid bgcolor 
+	&:after
+		position absolute
+		display block
+		content ''
+		top -220px
+		right 0
+		width 0
+		height 0
+		border-right 0 solid transparent
+		border-left 675px solid transparent
+		border-bottom 220px solid bgcolor
+.footer_block__column
+	vertical-align top
+	display inline-block
+	width 310px
+	height 230px
+	margin 0 40px
+.column__title_light
+	font-size 3.6em
+	color #fff
+	text-transform uppercase
+	
+.column__title_light-left
+	position relative
+	z-index 10
+	&:after
+		position absolute
+		display block
+		content ''
+		z-index -1
+		background url(../img/footer-bg-title-left.png)
+		top 0
+		left 69px
+		height 45px
+		width 197px
+.column__title_light-center
+	position relative
+	z-index 10
+	&:after
+		position absolute
+		display block
+		content ''
+		z-index -1
+		background url(../img/footer-bg-title-center.png)
+		top 0
+		left 40px
+		height 45px
+		width 276px
+.column__title_light-right
+	position relative
+	z-index 10
+	&:after
+		position absolute
+		display block
+		content ''
+		z-index -1
+		background url(../img/footer-bg-title-right.png)
+		top 0
+		left 47px
+		height 45px
+		width 243px
+		
+.column__list
+	list-style none
+	margin 0
+	padding 0
+	display inline-block
+	text-align left
+	margin-top 50px
+	margin-right 10px
+	vertical-align top
+.column__text
+	margin-top 50px
+	color #fff
+	font-size 2.4em	
+	line-height 1.5em
+.column_text_orange
+	color #ff9900
+	font-size 2.4em
+.list__item
+	margin-bottom 25px
+	color #fff
+	//font-size 2.4em
+	
+.list__link
+	text-decoration none
+	margin-bottom 25px
+	color #fff
+	font-size 2.4em
+	&:hover
+		color #ff9900
+		cursor pointer
