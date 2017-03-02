@@ -1,13 +1,49 @@
 body
-  background #f1f1f3
-  color white
+  background-color #f1f1f3
+  color: #1f1f1f;
   font 62.5% arial, tahoma
-
-.container
-  width 1100px
-  max-width 98%
-  margin 0 auto
-  position relative
+  font-family: Tahoma,sans-serif
 
 .start_top
     background url(../img/top.jpg) center top no-repeat
+
+.container-full
+  box-sizing: border-box
+  display: inline-block
+  overflow: hidden;
+  position: relative
+  vertical-align: top
+  width: 100%
+
+.container
+  box-sizing: border-box
+  margin: 0 auto
+  position: relative
+  max-width: 120em
+
+  &:after, &:before
+    clear: both
+    content: ""
+    display: table
+    line-height: 0
+    width: 100%
+
+[class*="sec"], [class*="grid"]
+  box-sizing: border-box
+  display: inline-block
+  float: left
+  margin-left: 2%
+  position: relative
+  vertical-align: top
+
+[class*="sec"]:first-child, [class*="grid"]:first-child, [class*="sec"][class*="-f"], .grid100
+  margin-left: 0
+
+.sec2
+  width: 49%
+
+.sec2-f
+  width: 50%
+
+.sec3
+  width: 32%
