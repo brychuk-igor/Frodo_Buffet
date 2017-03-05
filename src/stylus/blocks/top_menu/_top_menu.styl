@@ -1,16 +1,46 @@
+.top_menu_page
+	position absolute
+	top 0
+	left 0
+	right 0
+	@media sm
+		left 15px
+		right 15px
+		width auto
 .top-menu
 	reset_ul()
-	margin 50px -18px
-	// border 1px solid silver
+	margin 110px 0 40px
+	@media sm
+		margin-top 130px
+	@media lg
+			margin 50px 0
+	@media xl
+		width 1200px
+		margin 50px auto
 
 .top-menu__item
-	display inline-block
-	margin 0 18px
-	font-size 2.0em
-	// background pink
-	&:nth-child(4)
-		margin-right 380px
+	font-size 1.8em
+	@media xs
+		display block
+		width 100%
+		text-align center
+		margin 8px 0
+	@media sm
+		display inline-block
+		margin 0 11px
+	@media md
+		font-size 2.0em
+	@media xl
+		margin 0 18px
+
+@media lg
+	for i in 5..15
+		.top-menu__item:nth-child({i})
+			float right
 
 .top-menu__item__link
 	color white
+	text-decoration none
 	text-transform uppercase
+	&:hover
+		color #f48a00
