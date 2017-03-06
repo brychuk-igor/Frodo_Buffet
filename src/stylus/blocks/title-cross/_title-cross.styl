@@ -4,6 +4,14 @@
 	text-align center
 	text-transform uppercase
 	font-weight 500
+	@media xs
+		font-size 5em
+	@media sm
+		font-size 6em
+	@media md
+		font-size 7em
+	@media lg
+		font-size 8em
 	&:after
 		display block
 		content ''
@@ -13,6 +21,26 @@
 		left 27%
 		top 50%
 		position absolute
+		@media xs
+			width 150px
+			height 8px
+			left 20%
+			top 48%
+		@media sm
+			width 175px
+			height 10px
+			left 22%
+			top 48%
+		@media md
+			width 220px
+			height 12px
+			left 26%
+			top 48%
+		@media lg
+			width 239px
+			height 12px
+			left 29%
+			top 50%
 		
 	&_light
 		color #f1f1f3
