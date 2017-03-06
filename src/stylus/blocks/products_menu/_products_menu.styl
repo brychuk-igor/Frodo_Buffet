@@ -1,76 +1,96 @@
 .product-img
 	text-align center
+	&__img
+		max-width 450px
+		width 100%
+  	height auto
+
 .products-menu__wrap_right .product-img, .products-menu__wrap_left .product-text
 	float left
-.products-menu__wrap_right .product-text, .products-menu__wrap_left .product-img
-	float right
-/* Title Section*/
-.container-title
-	font-size 8em
-	font-weight 700
-	color #1f1f1f
-	position relative
-	text-align center
-	padding-top 75px
-	padding-bottom 75px
-.container-title__line
-	background-color #f48a00
-	width 15rem
-	height .75rem
-	position absolute
-	top 0
-	bottom 0
-	margin auto
-	right 50%
-/* Burger Section*/
-.product-text__title
-	padding .4em 4rem .2em
-.product-text__title, .product-text__heading
-	font-size 4em
-	font-weight 700
-.product-text__content
-	background-color #1f1f1f
-	position relative
-	padding 3.8em 6em 7em 6em
-.product-text__content:before
-	background-color #1f1f1f
-	content ""
-	position absolute
-	top 0
-	bottom 0
-	width 50vw
-	z-index -1
-.products-menu__wrap_left .product-text
-	text-align right
-.products-menu__wrap_right .product-text
+
+.products-menu__wrap_left .product-img, .products-menu__wrap_right .product-text
+	float left
+	@media lg
+		float right
+
+.product-text
+	&__title
+		padding .2em 2rem .2em
+		@media lg
+			padding-right 4rem
+			padding-left 4rem
+
+	&__title, &__heading
+		font-size 3em
+		font-weight bold
+		@media lg
+			font-size 4em
+
+	&__content
+		background-color #1f1f1f
+		position relative
+		padding 2em 2rem
+		@media lg
+			padding 3.5rem 4rem
+		&:before
+			background-color #1f1f1f
+			content ""
+			position absolute
+			top 0
+			bottom 0
+			width 50vw
+			z-index -1
+
+.products-menu__wrap_right .product-text 
 	text-align left
+
 .products-menu__wrap_left .product-text__content:before
 	right 0
+
 .products-menu__wrap_right .product-text__content:before
 	left 0
+
 .product-text__heading
 	color #fff
-	margin-bottom 10px
+	margin-bottom 1em
+
 .product-text__paragraph
-	font-size 3.3em
+	font-size 1.8em
 	color #fff
-	padding 27px 0 10px
+	padding 1.35em 0 .5em
 	line-height 155%
-.product-text__paragraph_color
+	@media lg
+		font-size 3.3em
+		padding 2.7em 0 1em
+
+&_color
 	color #f48a00
+
 .product-text__tags
 	background-color #f48a00
 	font-weight 600
 	padding .8em 1.4em
 	color #fff
 	display inline-block
-	font-size 1.8em
+	font-size 1.6em
+	@media lg
+		font-size 1.8em
+
+.product-text__btn-block
+	margin 2em 2rem 3em
+	@media lg
+		margin 8rem 0 10rem
+.products-menu__wrap_left &
+	text-align left
+	@media lg
+		text-align right
+.products-menu__wrap_right &
+	text-align left
 
 .btn-link
-	padding 20px 64px
-	// margin 78px 0 192px
-	font-size 3.5em
-	font-weight 700
+	padding 2rem 6.4rem
+	font-size 1.8em
+	font-weight bold
 	background-color transparent
 	border 2px solid #1f1f1f
 	color #1f1f1f
@@ -84,6 +104,11 @@
 	vertical-align middle
 	box-sizing border-box
 	transition all 250ms ease
+	@media xs
+		padding 2rem 0
+		width 100%	
+	@media lg
+		font-size 3.5em
 	&:before
 		content:""
 		border 2px solid #1f1f1f
@@ -93,7 +118,3 @@
 		position absolute
 		right 8px
 		top 12px
-
-	@media xs
-		padding 20px 0
-		width 100%	

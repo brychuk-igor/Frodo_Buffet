@@ -16,5 +16,6 @@ mixin products_menu(prefix, ...items)
 					+e.H4.heading #{item.productHeading}
 					+e.SPAN.tags #{item.productTags}
 					+e.P.paragraph #{item.productParagraph}
-				+e.A.btn.btn-link_double-line(href="#") #{item.productDoubleLine}
+				+e.DIV.btn-block
+					+e.A.btn.btn-link_double-line(href="#") #{item.productDoubleLine}
 
