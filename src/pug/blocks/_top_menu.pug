@@ -1,7 +1,5 @@
-mixin b_top_menu(items)
-	ul.top-menu
-			each item, index in items
-				li.top-menu__item.items.length
-					a(href="/#").top-menu__item__link= item.name
-						if item.children
-							+menu(item.children)
+mixin b_top_menu(menu)
+	+b('ul').top-menu
+		each item, index in menu
+			+b('li').top-menu__item
+				+b.A(href="/#").top-menu__item__link= item.name
