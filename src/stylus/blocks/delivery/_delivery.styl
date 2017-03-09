@@ -1,7 +1,9 @@
+//mixin for text
 font(font-size, color, line-height)
 	font-size 3.3em
 	color #ffffff
 	line-height 1.3em
+//
 
 .delivery
 	max-height 1610px
@@ -128,14 +130,13 @@ font(font-size, color, line-height)
 			@media lg
 				margin-top 65px
 				font-size 3.3em
-
-.delivery__image
-	margin-top 85px
-	@media xs
-		margin-top 25px
-	@media sm
-		margin-top 25px
-	@media md
-		margin-top 50px
-	@media lg
+	&__image
 		margin-top 85px
+		@media xs
+			margin-top 25px
+		@media sm
+			margin-top 25px
+		@media md
+			margin-top 50px
+		@media lg
+			margin-top 85px
