@@ -1,8 +1,8 @@
 module.exports = {
     src : {
         root    : 'src/',
-        pug    : 'src/pug',
-        stylus    : 'src/stylus',
+        pug     : 'src/pug',
+        stylus  : 'src/stylus',
         js      : 'src/js/',
         img     : 'src/img/',
         helpers : 'gulp/helpers/'

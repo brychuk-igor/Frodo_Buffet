@@ -1,144 +1,137 @@
-.delivery_block
+.delivery
+	max-height 1610px
 	background url(../img/delivery-bg.png) no-repeat top center
-	padding-top 110px
-	min-height 1610px
+	padding-top pt = 110px
+	padding-bottom pb = 345px
 	text-align center
-	
 	@media xs
-		padding-top 40px
-		min-height 1140px
+		padding-top pt*0.5
+		padding-bottom pb*0.3
+		max-height 100%
 	@media sm
-		padding-top 60px
+		padding-top pt*0.6
+		padding-bottom pb*0.4
 	@media md
-		padding-top 80px
+		padding-top pt*0.8
+		padding-bottom pb*0.65
 	@media lg
-		padding-top 100px
-		
-.item
-	width 340px
-	display inline-block
-	margin 0 29px
-	padding-top 150px
-	text-align center
-	vertical-align top
-	border(white)
-	@media xs
-		padding-top 35px
-	@media sm
-		padding-top 50px
-	@media md
-		width 260px
-		padding-top 75px
-		margin 0 10px
-	@media lg
-		padding-top 100px
-		width 340px
-		margin 0 29px
-		
-.item__image
-	margin-bottom 80px
-	background-position center
-	//vertical-align bottom
-	width w = 150px
-	height w
-	@media xs
-		margin-bottom 35px
-		width w = 100px
-		height w
-	@media sm
-		margin-bottom 50px
-		width w = 120px
-		height w
-	@media md
-		margin-bottom 75px
-		width w = 130px
-		height w
-	@media lg
-		margin-bottom 100px
-		width w = 140px
-		height w
-.item__text
-	//text-align top
-	font-size 3.3em
-	color #ffffff	
-	@media xs
-		font-size 2.0em
-	@media sm
-		font-size 2.4em
-	@media md
-		font-size 2.8em
-	@media lg
-		font-size 3.0em
-		
-.delivery__text_top
-	position relative
-	margin-top 250px
-	text-align center
-	font-size 3.3em
-	color #ffffff
-	z-index 10
-	@media xs
-		margin-top 50px
-		font-size 2.0em
-	@media sm
-		margin-top 100px
-		font-size 2.4em
-	@media md
-		margin-top 150px
-		font-size 2.8em
-	@media lg
-		margin-top 200px
-		font-size 3.0em
-	&:after
-		display block
-		content ''
-		position absolute
-		top -10px
-		right 266px
-		width 561px
-		height 109px
-		background url(../img/delivery-text-top-bg.png) no-repeat
-		z-index -1
-		@media xs
-			transform scale(0.6)
-			top -52%
-			right -10%
-		@media sm
-			transform scale(0.68)
-			top -40%
-			right 0%
-		@media md
-			transform scale(0.75)
-			top -25%
-			right 15%
-		@media lg
-			transform scale(0.85)
-			top -20%
-			right 20%
-		@media xl
-			transform scale(0.9)
-			top -20%
-			right 24%
+		padding-top pt
+		padding-bottom bm
 
-		
-.delivery__text_bottom
-	text-align center
-	margin-top 60px
-	color #ffffff	
-	font-size 3.3em
+.delivery__container
+	margin 0 auto
+	max-width 100%
+	width 1200px
+
+.delivery__wrapper
+	display flex
+	justify-content space-between
+	flex-wrap nowrap
+	margin-bottom mb = 250px
+
 	@media xs
-		margin-top 20px
-		font-size 2.0em
+		justify-content space-around
+		flex-wrap wrap
+		margin-bottom mb*0.2
 	@media sm
-		margin-top 30px
+		justify-content space-around
+		flex-wrap wrap
+		margin-bottom mb*0.2
+	@media md
+		flex-wrap nowrap
+		margin-bottom mb*0.5
+	@media lg
+		flex-wrap nowrap
+		margin-bottom mb
+
+.delivery__item
+	display inline-block
+	max-width 360px
+	padding-right 5px
+	padding-left 5px
+	vertical-align center
+	padding-top mt = 160px
+	@media xs
+		padding-top mt*0.25
+	@media sm
+		width 340px
+		padding-top mt*0.25
+	@media md
+		width 340px
+		padding-top mt*0.5
+	@media lg
+		padding-top mt
+
+.delivery__icon
+	margin-bottom 80px
+	@media xs
+		transform scale(0.85)
+		margin-bottom 20px
+	@media sm
+		margin-bottom 20px
+	@media md
+		margin-bottom 40px
+	@media lg
+		margin-bottom 80px
+
+.delivery__content
+	font(3.3em, #ffffff, 1.3em)
+	@media xs
+		font-size 2.4em
+	@media sm
 		font-size 2.4em
 	@media md
-		margin-top 40px
 		font-size 2.8em
 	@media lg
-		margin-top 50px
-		font-size 3.0em
-.delivery__image
-	text-align center
-	margin-top 60px
-	
+		font-size 3.3em
+
+.delivery
+	&__text
+		font(3.3em, #ffffff, 1.3em)
+		@media xs
+			font-size 2.4em
+		@media sm
+			font-size 2.4em
+		@media md
+			font-size 2.8em
+		@media lg
+			font-size 3.3em
+		&_top
+			position relative
+			z-index 10
+			&:after
+				display block
+				content ''
+				position absolute
+				top 0
+				width 100%
+				height 125%
+				background-image url(../img/delivery_bg_center.svg)
+				background-repeat no-repeat
+				background-position center
+				z-index -1
+		&_bottom
+			margin-top 65px
+			@media xs
+				margin-top 20px
+				font-size 2.4em
+			@media sm
+				margin-top 20px
+				font-size 2.4em
+			@media md
+				margin-top 40px
+				font-size 2.8em
+			@media lg
+				margin-top 65px
+				font-size 3.3em
+	&__image
+		margin-top 85px
+		@media xs
+			margin-top 25px
+		@media sm
+			margin-top 25px
+		@media md
+			margin-top 50px
+		@media lg
+			margin-top 85px
+
