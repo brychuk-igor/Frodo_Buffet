@@ -1,14 +1,14 @@
 extends ./../layouts/_layout
 
+
 block title
 	title Frodo Buffet Pub
 
 block content
-	+b_catalog_menu(menu)
+	+b_catalog_menu(cat_menu)
+	+b_prod_card()
+	+b_prod_order()
 
-	+b_delivery()
-	+b_map()
-	+b_footer()
 
 	append params
 		- topMenuClassname = 'inner'

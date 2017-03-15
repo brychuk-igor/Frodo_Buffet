@@ -8,9 +8,11 @@ body
 *
   box-sizing border-box
 
+.container-full, .container
+	box-sizing border-box
+	padding 0 15px
 
 .container-full
-  box-sizing border-box
   display inline-block
   overflow hidden;
   position relative
@@ -18,10 +20,8 @@ body
   width 100%
 
 .container
-  box-sizing border-box
   margin 0 auto
   position relative
-  max-width 100%
   width 100%
   @media (min-width:992px)
     max-width 1200px;
@@ -35,6 +35,24 @@ body
 
 .text-center
 	text-align center
+
+.clearfix:after, .clearfix:before
+	  visibility hidden
+	  display block
+	  font-size 0
+	  content " "
+	  clear both
+	  height 0
+
+img
+	max-width 100%
+
+.o-h
+	overflow hidden
+
+.uppercase
+	text-transform uppercase
+
 [class*="sec"], [class*="grid"]
   box-sizing border-box
   display inline-block
@@ -45,6 +63,8 @@ body
 
 [class*="sec"]:first-child, [class*="grid"]:first-child, [class*="sec"][class*="-f"], .grid100
   margin-left 0
+
+
 
 .sec2
   width 49%

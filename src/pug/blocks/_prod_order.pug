@@ -1,0 +1,11 @@
+mixin b_prod_order()
+	.container
+		.text-center.prod-order
+			.form-increment
+				+e('button').form-increment__button.button--icon
+					span &minus;
+				+e('input').form-increment__input
+				+e('button').form-increment__button.button--icon
+					span +
+			a.btn-link(href="#")
+				font Заказать
