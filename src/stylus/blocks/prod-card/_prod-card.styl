@@ -6,31 +6,44 @@
 	color link_hover_color
 
 .prod-card__prise
-	font-size 90px
-	color 9em
+	font-size 2.8em
 	float right
+	@media md
+		font-size 9em
 
 .prod-card__title
 	display inline-block
-	font-size 9em
+	vertical-align middle
+	font-size 2.8em
 	color link_hover_color
+	margin-right 10px
+	@media md
+		font-size 9em
 
 .prod-card__navigation
+	display inline-block
 	text-decoration none
-	font-size 5em
+	font-size 2em
 	color #111111
+	@media md
+		font-size 5em
 
 .prod-card__descr_col
+	margin 15px 0 25px
 	@media md
 		width 30%
 		float left
 
 .prod-card__category
 	margin 20px 0
-	font-size 26px
+	font-size 2.0em
+	@media md
+		font-size 2.6em
 
 .prod-card__description
-	font-size 2.6em
+	font-size 1.6em
+	@media md
+		font-size 2.6em
 
 .prod-card__img
 	@media md
@@ -38,23 +51,7 @@
 		float left
 
 .prod-card__composit
-	padding-top 40px
+	padding 40px 0 0
 	@media md
 		width 30%
 		float right
-
-.prod-card__composit__item
-	font-style italic
-	font-size 2.6em
-	position relative
-	padding-left 63px
-	&:before
-		clear both
-		content ""
-		display block
-		position absolute
-		left 0
-		top 8px
-		width 37px
-		height 2px
-		background #111111
