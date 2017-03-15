@@ -3,19 +3,19 @@ mixin products_menu(prefix, ...items)
 	- wraperPositionRight = '_wrap_right'
 	each item, index in items
 		div(class=index%2 == 0 ? prefix + wraperPositionLeft+' container' : prefix + wraperPositionRight+' container')
-			+b.product-img.sec2-f
+			+e.product-img.sec2-f
 				+e.IMG.img(src=item.productImgSrc)
 				+e.feature
 					+b.product-feature
 						+e.block
 							+e.SPAN.text
 							+e.SPAN.line
-			+b.product-text.sec2-f
+			+e.product-body.sec2-f
 				+e.H3.title #{item.productTitle}
 				+e.content
 					+e.H4.heading #{item.productHeading}
 					+e.SPAN.tags #{item.productTags}
 					+e.P.paragraph #{item.productParagraph}
-				+e.DIV.btn-block
-					+e.A.btn.btn-link_double-line(href="#") #{item.productDoubleLine}
+				+e.btn-block
+					+e.A.btn.btn-link(href="#") #{item.productDoubleLine}
 

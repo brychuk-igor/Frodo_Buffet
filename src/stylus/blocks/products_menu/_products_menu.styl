@@ -1,19 +1,41 @@
-.product-img
-	text-align center
+
+.product
+	&__wrap_right &__product-img,
+	&__wrap_left &__product-text
+		float left
+
+	&__wrap_left &__product-img,
+	&__wrap_right &__product-text
+		float left
+		@media lg
+			float right
+
+	&__wrap_left
+		text-align left
+		@media lg
+			text-align right
+
+	&__wrap_right
+		text-align left
+
+	&__wrap_left &__content:before
+		right 0
+
+	&__wrap_right &__content:before
+		left 0
+
+	&__product-img
+		text-align center
+
 	&__img
-		max-width 450px
+	  display inline-block
+	  height auto
 		width 100%
-  	height auto
+		max-width 270px
+		@media lg
+			padding-top 115px
+			max-width 450px
 
-.products-menu__wrap_right .product-img, .products-menu__wrap_left .product-text
-	float left
-
-.products-menu__wrap_left .product-img, .products-menu__wrap_right .product-text
-	float left
-	@media lg
-		float right
-
-.product-text
 	&__title
 		padding .2em 2rem .2em
 		@media lg
@@ -31,7 +53,7 @@
 		position relative
 		padding 2em 2rem
 		@media lg
-			padding 3.5rem 4rem
+			padding 2.75rem 4rem 5.5em
 		&:before
 			background-color #1f1f1f
 			content ""
@@ -40,81 +62,33 @@
 			bottom 0
 			width 50vw
 			z-index -1
+	&__heading
+		color #fff
+		margin-bottom: .25em;
 
-.products-menu__wrap_right .product-text 
-	text-align left
-
-.products-menu__wrap_left .product-text__content:before
-	right 0
-
-.products-menu__wrap_right .product-text__content:before
-	left 0
-
-.product-text__heading
-	color #fff
-	margin-bottom 1em
-
-.product-text__paragraph
-	font-size 1.8em
-	color #fff
-	padding 1.35em 0 .5em
-	line-height 155%
-	@media lg
-		font-size 3.3em
-		padding 2.7em 0 1em
-
-&_color
-	color #f48a00
-
-.product-text__tags
-	background-color #f48a00
-	font-weight 600
-	padding .8em 1.4em
-	color #fff
-	display inline-block
-	font-size 1.6em
-	@media lg
+	&__paragraph
 		font-size 1.8em
+		color #fff
+		padding 1.35em 0 .5em
+		line-height 170%
+		@media lg
+			font-size 2.25em
+			padding 1.25em 0 1em
 
-.product-text__btn-block
-	margin 2em 2rem 3em
-	@media lg
-		margin 8rem 0 10rem
-.products-menu__wrap_left &
-	text-align left
-	@media lg
-		text-align right
-.products-menu__wrap_right &
-	text-align left
+	&__tags
+		background-color #f48a00
+		color #fff
+		font-weight 600
+		padding .5em .8em
+		display inline-block
+		font-size 1.6em
+		@media lg
+			font-size 1.8em
 
-.btn-link
-	padding 2rem 6.4rem
-	font-size 1.8em
-	font-weight bold
-	background-color transparent
-	border 2px solid #1f1f1f
-	color #1f1f1f
-	cursor pointer
-	display inline-block
-	outline none
-	position relative
-	text-align center
-	text-decoration none
-	text-transform uppercase
-	vertical-align middle
-	box-sizing border-box
-	transition all 250ms ease
-	@media xs
-		padding 2rem 0
-		width 100%	
-	@media lg
-		font-size 3.5em
-	&:before
-		content:""
-		border 2px solid #1f1f1f
-		pointer-events none
-		height:100%
-		width 100%
-		position absolute
-		right 8px
-		top 12px
+	&__btn-block
+		margin 2em 2rem 3em
+		@media lg
+			margin 8rem 0 10rem
+
+	&_color
+		color #f48a00

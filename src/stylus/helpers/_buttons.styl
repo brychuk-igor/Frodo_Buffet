@@ -1,0 +1,31 @@
+.btn-link
+	padding 2rem 6.4rem
+	font-size 1.8em
+	font-weight bold
+	background-color transparent
+	border 2px solid #1f1f1f
+	color #1f1f1f
+	cursor pointer
+	display inline-block
+	outline none
+	position relative
+	text-align center
+	text-decoration none
+	text-transform uppercase
+	vertical-align middle
+	box-sizing border-box
+	transition all 250ms ease
+	@media xs
+		padding 2rem 0
+		width 100%	
+	@media lg
+		font-size 3.5em
+	&:before
+		content:""
+		border 2px solid #1f1f1f
+		pointer-events none
+		height:100%
+		width 100%
+		position absolute
+		right 8px
+		top 12px
