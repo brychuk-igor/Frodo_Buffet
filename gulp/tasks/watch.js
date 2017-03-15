@@ -15,5 +15,5 @@ gulp.task('watch', [
 gulp.task('delete', function (cb) {
     rimraf('./'+config.dest.root, cb);
 });
-gulp.task('default', ['server','watch','pug','copy','stylus', 'js'], function() {});
-gulp.task('build', ['html','pug','copy','stylus', 'js'], function() {}); //,'font','sprite','js',
+gulp.task('default', ['server','watch','pug','copy','stylus','js'], function() {});
+gulp.task('build', ['html','pug','copy','stylus','js'], function() {}); //,'font','sprite','js',
