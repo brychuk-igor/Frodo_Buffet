@@ -6,12 +6,26 @@ html
 		block title
 			title Jade Layout Template
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+
 		- var menu = [{name: 'О нас', id:1}, {name: 'Блог', id:2}, {name: 'Меню', id:3},{name: 'Акции', id:4},{name: 'Доставка', id:5},{name: 'Контакты', id:6},{name: 'Вход', id:7}]
+		- var cat_menu = [{name: 'Бургеры', id:1}, {name: 'Квас', id:2}, {name: 'Мясо', id:3}, {name: 'Десерты', id:4}]
+
 	body
-		.container.top_menu_page
-			+b_top_menu(menu)
-			+b_logo()
+		block params
+			- var topMenuClassname = ""
+		- var className = ''
+		if topMenuClassname
+			- className = 'top-menu-' + topMenuClassname
+		div(class=className)
+			.container
+				+b_top_menu(menu)
+				+b_logo()
 		block content
-		
+
+		+b_delivery()
+		+b_map()
+		+b_footer()
+
 		link(rel="stylesheet" media="all" href="css/all.css")
-		script(src="js/custom.min.js")
+		block head_scripts
+      script(src="js/custom.min.js")

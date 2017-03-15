@@ -1,0 +1,7 @@
+mixin b_catalog_menu(cat_menu)
+	.catalog-menu-bg
+		.container.text-center
+			+b('ul').catalog-menu
+				each item, index in cat_menu
+					+e('li').item
+						+e.A(href="/#").item__link= item.name
