@@ -9,6 +9,9 @@ const JS_PAGES_DIR = ([
                 `${config.src.js}lib/jquery.min.js`,
                 `${config.src.js}lib/owl.carousel.js`,
                 `${config.src.js}lib/bxslider.min.js`,
+                `${config.src.js}lib/imagesloaded.pkgd.min.js`,
+                `${config.src.js}lib/jquery.lazyload.min.js`,
+                `${config.src.js}lib/preloader.js`,
                 `${config.src.js}custom.js`,
                 `${config.src.js}*.js`]);
 
