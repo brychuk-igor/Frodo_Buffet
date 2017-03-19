@@ -1,43 +1,42 @@
-include ./../mixins/_mixins_products_menu.pug
+mixin products-menu()
+	.container-full
+		+b.container
+			+b.H2.container-title МЕНЮ
+				+e.SPAN.line
 
-.container-full
-	+b.container
-		+b.H2.container-title МЕНЮ
-			+e.SPAN.line
-
-+b.product.container-full
-	+products_menu(
-		'product__wrap product_',
-		{
-			productImgSrc : "./img/burger.png",
-			productTitle : "БУРГЕРЫ",
-			productHeading : "БРАТСТВО КОЛЬЦА",
-			productTags : "самый популярный",
-			productParagraph : "В этом буфете публика разная: здесь можно встретить и эльфа, и хоббита. Это потому что, все любят бургер. В нём: котлета, бобы по семейному рецепту основателя буфета, тортилья, чеддер, лук, сальса, булочка.",
-			productDoubleLine : "ВСЕ БУРГЕРЫ"
-		},
-		{
-			productImgSrc: "./img/beer.png",
-			productTitle: "КВАС",
-			productHeading: "ДВЕ КРЕПОСТИ",
-			productTags: "самый популярный",
-			productParagraph: "Надо сказать, что квас был любим народом не только за свой замечательный вкус. Благодаря квасу бедняки не болели, несмотря на долгую зиму и отсутствие в рационе  свежих овощей и фруктов.",
-			productDoubleLine: "ВСЕ НАПИТКИ"
-		},
-		{
-			productImgSrc: "./img/cheaken.png",
-			productTitle: "МЯСО",
-			productHeading: "ВОЗВРАЩЕНИЕ КОРОЛЯ",
-			productTags: "самый популярный",
-			productParagraph: "В нашем буфете работаю только высоко- квалифицированные сотрудники, которые прошли специальное обучение. Настоящие профессионалы имеют право готовить незабываемо вкусные блюда из курицы по нашим секретным рецептам.",
-			productDoubleLine: "ВСЕ БЛЮДА"
-		},
-		{
-			productImgSrc: "./img/cake.png",
-			productTitle: "ДЕСЕРТЫ",
-			productHeading: "ОХОТА НА ГОРЛУМА",
-			productTags: "самый популярный",
-			productParagraph: "В нашем буфете можно выбрать десерт на любой вкус. Так как основатель хотел очень удивить своих посетителей разнообразностью рецептов доставленых из Шира.",
-			productDoubleLine: "ВСЕ ДЕСЕРТЫ"
-		}
-	)
+	+b.product.container-full
+		+products_menu(
+			'product__wrap product_',
+			{
+				productImgSrc : "./img/burger.png",
+				productTitle : "БУРГЕРЫ",
+				productHeading : "БРАТСТВО КОЛЬЦА",
+				productTags : "самый популярный",
+				productParagraph : "В этом буфете публика разная: здесь можно встретить и эльфа, и хоббита. Это потому что, все любят бургер. В нём: котлета, бобы по семейному рецепту основателя буфета, тортилья, чеддер, лук, сальса, булочка.",
+				productDoubleLine : "ВСЕ БУРГЕРЫ"
+			},
+			{
+				productImgSrc: "./img/beer.png",
+				productTitle: "КВАС",
+				productHeading: "ДВЕ КРЕПОСТИ",
+				productTags: "самый популярный",
+				productParagraph: "Надо сказать, что квас был любим народом не только за свой замечательный вкус. Благодаря квасу бедняки не болели, несмотря на долгую зиму и отсутствие в рационе  свежих овощей и фруктов.",
+				productDoubleLine: "ВСЕ НАПИТКИ"
+			},
+			{
+				productImgSrc: "./img/cheaken.png",
+				productTitle: "МЯСО",
+				productHeading: "ВОЗВРАЩЕНИЕ КОРОЛЯ",
+				productTags: "самый популярный",
+				productParagraph: "В нашем буфете работаю только высоко- квалифицированные сотрудники, которые прошли специальное обучение. Настоящие профессионалы имеют право готовить незабываемо вкусные блюда из курицы по нашим секретным рецептам.",
+				productDoubleLine: "ВСЕ БЛЮДА"
+			},
+			{
+				productImgSrc: "./img/cake.png",
+				productTitle: "ДЕСЕРТЫ",
+				productHeading: "ОХОТА НА ГОРЛУМА",
+				productTags: "самый популярный",
+				productParagraph: "В нашем буфете можно выбрать десерт на любой вкус. Так как основатель хотел очень удивить своих посетителей разнообразностью рецептов доставленых из Шира.",
+				productDoubleLine: "ВСЕ ДЕСЕРТЫ"
+			}
+		)
