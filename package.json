@@ -17,7 +17,8 @@
     "gulp-include": "^2.3.1",
     "gulp-notify": "^3.0.0",
     "gulp-pug": "^3.2.0",
-    "gulp-stylus": "^2.6.0"
+    "gulp-stylus": "^2.6.0",
+    "imagesloaded": "^4.1.1"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.13.0",

@@ -1,4 +1,4 @@
-mixin b_delivery()
+mixin b_delivery(image='img/instagram.500-800.png')
 	+b.delivery
 		+e.container
 			h2.title-cross.title-cross_light Доставка
@@ -16,5 +16,5 @@ mixin b_delivery()
 			+e("p").text_bottom
 				| И получи дополнительный десерт<br>
 				| при следующем заказе :)
-			+e("img").image(src="img/instagram.png")
+			+e("img").image.lazy(data-origin=image src="img/instagram.png")
 

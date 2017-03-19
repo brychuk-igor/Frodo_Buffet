@@ -7,7 +7,10 @@ html
 			title Jade Layout Template
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		- var menu = [{name: 'О нас', id:1}, {name: 'Блог', id:2}, {name: 'Меню', id:3},{name: 'Акции', id:4},{name: 'Доставка', id:5},{name: 'Контакты', id:6},{name: 'Вход', id:7}]
-	body
+	body#body
+		+b.preloader(style="position: fixed; top: 0; left: 0; right: 0; bottom:0; background: white; z-index:100")
+			+e.text(style="font-size:1,5em;display:flex;align-items:center;justify-content:center;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: red; width: 130px ; height: 130px;")
+				+e.preloader__value 0%
 		.container.top_menu_page
 			+b_top_menu(menu)
 			+b_logo()

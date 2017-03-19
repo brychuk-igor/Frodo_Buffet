@@ -8,9 +8,11 @@ let gulp = require('gulp'),
 const JS_PAGES_DIR = ([
                 `${config.src.js}lib/jquery.min.js`,
                 `${config.src.js}lib/owl.carousel.js`,
-                `${config.src.js}lib/bxslider.min.js`,
-                `${config.src.js}custom.js`,
-                `${config.src.js}*.js`]);
+                `${config.src.js}lib/jquery.bxslider.min.js`,
+                `${config.src.js}lib/imagesloaded.pkgd.min.js`,
+                `${config.src.js}lib/jquery.lazyload.js`,
+                `${config.src.js}preloader.js`,
+                `${config.src.js}custom.js`]);
 
 const JS_DIR = `${config.src.js}/**/*.js`;
 const JS_MINIFY_NAME = 'custom.min.js';
