@@ -1,5 +1,4 @@
 extends ./../layouts/_layout
-
 block title
 	title Frodo Buffet Pub
 
@@ -7,10 +6,11 @@ block content
 	+b_promo_gallery()
 	.container
 		+b_start_history_block()
-
 	+products-menu()
 	.container-full.bg-image_dark
 		+image-gallery()
 		+b_delivery()
 	+b_map()
 	+b_footer()
+append params
+	- topMenuClassname = 'index'

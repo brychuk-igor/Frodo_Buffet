@@ -1,0 +1,14 @@
+extends ./../layouts/_layout
+
+
+block title
+	title Frodo Buffet Pub
+
+block content
+	+b_catalog_menu(cat_menu)
+	+b_prod_card()
+	+b_prod_order()
+
+
+	append params
+		- topMenuClassname = 'inner'

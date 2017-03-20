@@ -1,0 +1,22 @@
+mixin b_prod_card()
+	- var composit = ["Фирменный соус", "Салат айсберг", "Филе страуса", "Сыр viola", "Соус сайльса с апельсином", "Булка кунжутная"]
+	.container
+		+e.prod-card
+			.clearfix
+				+e.prod-card__prise 40 грн
+				.o-h
+					+e('h1').prod-card__title Clorfindel
+					+e('a').prod-card__navigation(href="#") &lt;
+					+e('a').prod-card__navigation(href="#") &gt;
+			+e.clearfix
+				+e.prod-card__descr_col
+					+e.prod-card__category.uppercase Бургер
+					+e.prod-card__description
+						| Основной ингредиент авторского бургера нашего шеф-повара - постное и полезное мясо страуса, которое содержит низкое количество жиров и холестерина.
+						| Прожарка medium rare раскрывает лучшие вкусовые качества страусиного мяса.
+						| 360 грамм + картошка и салат
+						| Бургер доставляться с картофелем фри или по-домашнему, салатом в комплекте.
+				+e.prod-card__img
+					img(src="img/hamburger1.png" alt="hamburger1")
+				+e.prod-card__composit
+					+b_list_striped(composit)
