@@ -6,8 +6,11 @@ block content
 	+b_promo_gallery()
 	.container
 		+b_start_history_block()
-
-	include ./../blocks/_products_menu.pug
-
+	+products-menu()
+	.container-full.bg-image_dark
+		+image-gallery()
+		+b_delivery()
+	+b_map()
+	+b_footer()
 append params
 	- topMenuClassname = 'index'

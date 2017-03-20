@@ -1,0 +1,55 @@
+.bg-image_dark
+	background: url(../img/bg.jpg) repeat top
+	background-size: contain;
+	height: auto
+	position: relative
+	&:before, &:after
+		content:""
+		position absolute
+		width 100%
+		height 20px
+	&:before
+		top -5px
+		background: url(../img/shape_top.svg) repeat-x top
+		background-size: 40px 20px
+		z-index: 2
+	&:after
+		bottom -5px
+		background: url(../img/shape_bottom.svg) repeat-x top
+		background-size: 40px 20px
+	.image-gallery
+		&__wrap
+			padding-top: 150px
+			&:before
+				content:""
+				position absolute
+				width: 152px
+				height: 325px
+				top: -10px
+				right: 0
+				background: url(../img/image-gallery_bg.png) repeat-x top
+		&__carousel
+			padding-top: 110px
+			padding-bottom: 120px
+
+.owl-theme
+	.owl-dots
+		margin-top:72px
+		text-align:center
+		-webkit-tap-highlight-color: transparent
+		.owl-dot
+			display:inline-block
+			zoom:1
+			span
+				width:20px
+				height:20px
+				box-sizing: border-box
+				margin:5px
+				background:transparent
+				display:block
+				border:2px solid #f1f1f3
+				-webkit-backface-visibility:visible
+				transition:opacity .2s ease
+				border-radius:30px
+			&.active span,&:hover span
+				background:#f1f1f3
