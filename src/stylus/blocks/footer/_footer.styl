@@ -1,11 +1,23 @@
-.footer_block
-	padding-top 115px
-	padding-bottom 150px
-	text-align center
+textColor = #ffffff
+orange = #ff9900
+
+.footer
+	padding-top fpt = 115px
+	padding-bottom fpb = 150px
 	background bgcolor = #1f1f1f
 	position relative
 	@media xs
-		padding-top 30px
+		padding-top fpt*0.3
+		padding-bottom fpb*0.3
+	@media sm
+		padding-top fpt*0.3
+		padding-bottom fpb*0.3
+	@media md
+		padding-top fpt*0.5
+		padding-bottom fpb*0.5
+	@media lg
+		padding-top fpt
+		padding-bottom fpb
 	&:before
 		position absolute
 		display block
@@ -17,7 +29,6 @@
 		border-left 0 solid transparent
 		border-right 675px solid transparent
 		border-bottom 220px solid bgcolor 
-		
 		@media xs
 			top -110px
 			left 0
@@ -54,7 +65,6 @@
 		border-right 0 solid transparent
 		border-left 675px solid transparent
 		border-bottom 220px solid bgcolor
-		
 		@media xs
 			top -110px
 			right 0
@@ -80,162 +90,115 @@
 			right 0
 			border-left 799px solid transparent
 			border-bottom 220px solid bgcolor
-				
-.footer_block__column
-	vertical-align top
-	display inline-block
-	width 310px
-	height 230px
-	margin 0 40px
+.footer__container
+	margin 0 auto
+	max-width 100%
+	width 1200px
+	display flex
+	flex-direction row
+	justify-content space-between
+	flex-wrap nowrap
 	@media xs
-		width 250px
-		margin 0 10px
+		justify-content space-around
+		flex-wrap wrap
 	@media sm
-		width 320px
-		margin 0 20px
+		flex-direction column
+		justify-content space-around
+		align-items center
+		flex-wrap wrap
 	@media md
-		width 250px
-		margin 0 20px
-	@media md
-		width 290px
-		margin 0 15px
+		flex-direction column
+		justify-content space-around
+		align-items center
+		flex-wrap wrap
 	@media lg
-		width 300px
-		margin 0 15px
-.column__title_light
-	font-size 3.6em
-	color #fff
+		flex-direction row
+		flex-wrap nowrap
+		justify-content space-between
+	@media xl
+		flex-wrap nowrap
+		justify-content space-between
+
+.footer__item
+	width 300px
+	margin-bottom 5em	
+	
+.footer__wrap
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	flex-wrap nowrap
+	justify-content space-around
+		
+.footer__title
+	margin-bottom 1em
+	font(3.6em, textColor, 1.3em)
+	text-align center
+	color textColor
 	text-transform uppercase
 	@media xs
-		font-size 2.0em
+		font-size 3.3em
 	@media sm
-		font-size 2.4em
+		font-size 3.3em
 	@media md
-		font-size 2.8em
-	@media md
-		font-size 3.0em
+		font-size 3.3em
 	@media lg
 		font-size 3.3em
-	
-.column__title_light-left
-	position relative
-	z-index 10
-	&:after
-		position absolute
-		display block
-		content ''
-		z-index -1
-		background url(../img/footer-bg-title-left.png)
-		top 0
-		left 69px
-		height 45px
-		width 197px
-.column__title_light-center
-	position relative
-	z-index 10
-	&:after
-		position absolute
-		display block
-		content ''
-		z-index -1
-		background url(../img/footer-bg-title-center.png)
-		top 0
-		left 40px
-		height 45px
-		width 276px
-		@media xs
-			transform scale(0.8)
-.column__title_light-right
-	position relative
-	z-index 10
-	&:after
-		position absolute
-		display block
-		content ''
-		z-index -1
-		background url(../img/footer-bg-title-right.png)
-		top 0
-		left 47px
-		height 45px
-		width 243px
-		@media xs
-			transform scale(0.8)
-.column__list
-	list-style none
-	margin 0
-	padding 0
-	display inline-block
-	text-align left
-	margin-top 50px
-	margin-right 10px
-	vertical-align top
-.column__text
-	margin-top 50px
-	color #fff
-	font-size 2.4em	
-	line-height 1.5em
-	@media xs
-		font-size 1.6em
-		margin-top 30px
-		line-height 1.25em
-	@media sm
-		font-size 1.8em
-		margin-top 35px
-		line-height 1.25em
-	@media md
-		font-size 2.0em
-		margin-top 40px
-		line-height 1.3em
-	@media lg
-		font-size 2.2em
-		margin-top 45px
-		line-height 1.35em
 	@media xl
-		font-size 2.4em
-		margin-top 50px
+		font-size 3.6em
+	&:first-child
+		position relative
+		z-index 10
+		&:after
+			display block
+			position absolute
+			content ''
+			top 0
+			width 100%
+			height 100%
+			z-index -1
+			background-image url(../img/footer_bg_left.svg)
+			background-repeat no-repeat
+			background-position center
+.footer__title_center
+	&:after
+		background-image url(../img/footer_bg_center.svg) !important
+				
+.footer__text
+	font(2.4em, textColor, 1.5em)
+	color textColor
+	text-align center
+	@media xs
+		font-size 2.0em
 		line-height 1.5em
-.column_text_orange
-	color #ff9900
-	font-size 2.4em
-	@media xs
-		font-size 1.6em
 	@media sm
-		font-size 1.8em
-	@media md
 		font-size 2.0em
+	@media md
+		font-size 2.4em
 	@media lg
-		font-size 2.2em
+		font-size 2.4em
 	@media xl
 		font-size 2.4em
-.list__item
-	margin-bottom 25px
-	color #fff
-	//font-size 2.4em
-	@media xs
-		margin-bottom 10px
-	@media sm
-		margin-bottom 10px
-	@media md
-		margin-bottom 15px
-	@media lg
-		margin-bottom 20px
-	@media xl
-		margin-bottom 25px
-.list__link
+	&_orange
+		color orange
+
+.footer__column
 	text-decoration none
-	margin-bottom 25px
-	color #fff
-	font-size 2.4em
+	font(2.4em, textColor, 2.4em)
 	@media xs
-		font-size 1.6em
+		font-size 2.0em
 	@media sm
-		font-size 1.8em
+		font-size 2.0em
 	@media md
 		font-size 2.0em
 	@media lg
 		font-size 2.2em
 	@media xl
-		font-size 2.4em
+		font-size 2.4em	
+.footer__tag
+	text-decoration none
+	color textColor
 	&:hover
-		color #ff9900
-		cursor pointer
+		color orange
