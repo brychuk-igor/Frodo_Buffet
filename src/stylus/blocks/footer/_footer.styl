@@ -95,20 +95,29 @@ orange = #ff9900
 	max-width 100%
 	width 1200px
 	display flex
+	flex-direction row
 	justify-content space-between
 	flex-wrap nowrap
 	@media xs
 		justify-content space-around
 		flex-wrap wrap
 	@media sm
+		flex-direction column
 		justify-content space-around
+		align-items center
 		flex-wrap wrap
 	@media md
-		flex-wrap nowrap
+		flex-direction column
+		justify-content space-around
+		align-items center
+		flex-wrap wrap
 	@media lg
+		flex-direction row
 		flex-wrap nowrap
+		justify-content space-between
 	@media xl
 		flex-wrap nowrap
+		justify-content space-between
 
 .footer__item
 	width 300px
