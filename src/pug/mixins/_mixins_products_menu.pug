@@ -1,7 +1,8 @@
-mixin products_menu(prefix, ...items)
+mixin products_menu(prefix, product_Menu)
+
 	- wraperPositionLeft = '_wrap_left'
 	- wraperPositionRight = '_wrap_right'
-	each item, index in items
+	each item, index in product_Menu
 		div(class=index%2 == 0 ? prefix + wraperPositionLeft+' container' : prefix + wraperPositionRight+' container')
 			+e.product-img.sec2-f
 				+e.IMG.img(src=item.productImgSrc)
@@ -18,4 +19,3 @@ mixin products_menu(prefix, ...items)
 					+e.P.paragraph #{item.productParagraph}
 				+e.btn-block
 					+e.A.btn.btn-link(href="#") #{item.productDoubleLine}
-
