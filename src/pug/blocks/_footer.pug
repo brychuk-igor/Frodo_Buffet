@@ -1,45 +1,27 @@
 mixin b_footer()
-	.footer_block
-		+b.container
-			.footer_block__column.column
-				h3.column__title_light.column__title_light-left Contact us
-				.column__text 
-					| г. Шира, ул. Усадьба 50<br>
-					| 8-800-574-54-45<br>
-				.column_text_orange info@byfet.ua
+	mixin block(title, text, text1, text_orange)
+				+e.item
+					+e('h3').title!= title
+					+e('p').text!= text
+					+e('p').text!= text1
+					+e('p').text_orange!= text_orange
 
-			.footer_block__column.column
-				h3.column__title_light.column__title_light-center Popular tags
-				ul.column__list.list
-					li.list__item 
-						a.list__link #buffet
-					li.list__item
-						a.list__link #friends
-					li.list__item
-						a.list__link #meat
-					li.list__item
-						a.list__link #fantasy
-				ul.column__list.list
-					li.list__item
-						a.list__link #food
-					li.list__item
-						a.list__link #cake
-					li.list__item
-						a.list__link #drink
-					li.list__item
-						a.list__link 
-				ul.column__list.list
-					li.list__item
-						a.list__link #cafe
-					li.list__item
-						a.list__link #magic
-					li.list__item
-						a.list__link 
-					li.list__item
-						a.list__link 
+	mixin list(...tags)
+		+e('ul').column
+			each item in tags
+				+e('a').tag(href="#")= item
+	
+	+b('footer').footer
+		+e.container
+			+block("Contact Us", "г. Шира, ул. Усадьба 50", "8-800-574-54-45", "info@byfet.ua")
+			+e.item
+				+e('h3').title_center Popular Tags
+				+e.wrap
+					+list('#buffet', '#friends', '#meat', '#fantasy')
+					+list('#food', '#cake', '#drink')
+					+list('#cafe', '#magic')
+					
+			+block("Working time", "ПН-ПТ:    08:00 - 21:00", "СБ-ВС:     08:00 - 19:00")
+			
 
-			.footer_block__column.column
-				h3.column__title_light.column__title_light-right Working time
-				.column__text 
-					| ПН-ПТ:    08:00 - 21:00<br>
-					| СБ-ВС:     08:00 - 19:00<br>
+			

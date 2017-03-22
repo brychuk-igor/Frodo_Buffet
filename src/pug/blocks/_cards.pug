@@ -1,0 +1,20 @@
+mixin b_cards()
+	+b.cards
+		+e.container
+			mixin card(name, pictures, price)
+				+b.card
+					+e('h2').name Бургер #{name}
+					+e('img').pictures(src="../img/" + pictures)
+					+e('p').price!= price
+					+b.form-increment_center
+						+e('button').button.button--icon
+							span.minus &minus;
+						+e('input').input(value="1" min="1" max="100" step="1")
+						+e('button').button.button--icon
+							span.plus +
+					+b('a').btn-link_center(href="#") 
+						font Заказать
+			+card("Glorfinder", "glorfinder.png", "40 грн")
+			+card("Sauron", "sauron.png", "40 грн")
+			+card("Texas", "texas.png", "40 грн")
+			+card("", "burger.png", "40 грн")

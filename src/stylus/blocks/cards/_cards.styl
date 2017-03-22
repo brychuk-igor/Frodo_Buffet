@@ -1,0 +1,154 @@
+cardBorder = #cccccc
+textColor = #333333
+cardBgc = #F1F1F3
+
+.cards
+	padding-top 215px
+	padding-bottom 330px
+	background-color cardBgc
+	@media xs
+		padding-top 75px
+		padding-bottom 110px
+	@media sm
+		padding-top 75px
+		padding-bottom 110px
+	@media md
+		padding-top 100px
+		padding-bottom 220px
+	
+.cards__container
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+	width 1200px
+	max-width 100%
+	margin 0 auto
+	@media xs
+		justify-content center
+	@media sm
+		justify-content center
+	@media md
+		justify-content center
+	@media lg
+		justify-content space-around
+	@media xl
+		justify-content space-between
+.card
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	flex-direction column
+	justify-content space-between
+	max-width 540px
+	margin-bottom 120px
+	padding-top 90px
+	padding-bottom 50px
+	border 2px dashed cardBorder
+	border-radius 1%
+	@media xs
+		justify-content center
+		width 90%
+		margin-bottom 60px
+		padding-top 45px
+	@media sm
+		justify-content center
+		width 90%
+		margin-bottom 60px
+		padding-top 45px
+	@media md
+		justify-content center
+		max-width 490px
+		margin-bottom 60px
+		padding-top 45px
+	@media lg
+		justify-content space-around
+		max-width 450px
+		margin-bottom 90px
+		padding-top 45px
+	@media xl
+		justify-content space-between
+		max-width 540px
+.card__name
+	font-size 4em
+	text-align center
+	color textColor
+	text-transform uppercase
+	font-weight bold
+	@media xs
+		font-size 3em
+	@media sm
+		font-size 3em
+.card__pictures
+	width auto
+	margin 0 auto
+	margin-top 60px
+	max-width 60vh
+	@media xs
+		max-width 40vh
+		margin-top 20px
+	@media sm
+		max-width 45vh
+		margin-top 20px
+	@media md
+		max-width 55vh
+		margin-top 30px
+	@media lg
+		max-width 60vh
+		margin-top 40px
+.card__price
+	font-size 11em
+	text-align center
+	color textColor
+	@media xs
+		font-size 8em
+	@media sm
+		font-size 8em
+	@media md
+		font-size 10em
+.card__number
+	text-align center
+.form-increment
+.btn-link
+	//margin 0 auto
+	//display block
+	
+.form-increment
+	display inline-block
+	font-size 0
+	&_center
+		margin 0 auto
+		margin-top 50px
+		margin-bottom 25px
+	@media xs
+		&_center
+			margin-top 25px
+			margin-bottom 20px
+
+.form-increment__button, .form-increment__input
+	height 71px
+	border solid #cccccc
+	text-align center
+	font-size 25px
+	background #ebebeb
+	@media xs
+		height 51px
+
+.form-increment__button
+	width 53px
+	border-width 1px
+
+.form-increment__input
+	border-width 1px 0
+	width 100px
+	
+.btn-link_center
+	display block
+	width 80%
+	margin 0 auto
+	
